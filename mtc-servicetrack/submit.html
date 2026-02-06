@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Ticket | MTC ServiceTrack</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-mark">MTC</div>
+        <div class="logo-text">
+          <h1>ServiceTrack</h1>
+          <span>Issue Submission</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="submit.html">Report Issue</a>
+        <a href="track.html">Track Ticket</a>
+        <a href="agent.html">Agent</a>
+        <a href="supervisor.html">Supervisor</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="glass-form">
+        <h2>Report a Service Issue</h2>
+        <p>
+          Fill out the form below. You will receive a ticket ID immediately for
+          tracking your request.
+        </p>
+        <form id="ticket-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input
+                class="glass-input"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="e.g. Maria Nandi"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input
+                class="glass-input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="maria@mtc.com.na"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input
+                class="glass-input"
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+264 81 000 0000"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="subject">Issue Subject</label>
+              <input
+                class="glass-input"
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Network downtime"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="category">Category</label>
+              <select class="glass-select" id="category" name="category" required>
+                <option value="">Select category</option>
+                <option>Connectivity</option>
+                <option>Billing</option>
+                <option>SIM Services</option>
+                <option>Mobile Money</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="priority">Priority</label>
+              <select class="glass-select" id="priority" name="priority" required>
+                <option value="">Select priority</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="description">Issue Description</label>
+            <textarea
+              class="glass-textarea"
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Describe the issue in detail..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="glass-btn" type="submit">Create Ticket</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="modal" id="success-modal" aria-hidden="true">
+      <div class="glass-card modal-content">
+        <h3>Ticket Submitted</h3>
+        <p>Your ticket ID is:</p>
+        <h2 id="modal-ticket-id">MTC-0000</h2>
+        <p>Use this ID to track your request online.</p>
+        <button class="glass-btn" id="close-modal">Done</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Thank you for helping us deliver better service.
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
