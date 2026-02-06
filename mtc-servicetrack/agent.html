@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Dashboard | MTC ServiceTrack</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-mark">MTC</div>
+        <div class="logo-text">
+          <h1>ServiceTrack</h1>
+          <span>Agent Dashboard</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="submit.html">Report Issue</a>
+        <a href="track.html">Track Ticket</a>
+        <a href="agent.html">Agent</a>
+        <a href="supervisor.html">Supervisor</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="glass-panel">
+        <h2>Agent Workspace</h2>
+        <p>Update ticket status to keep customers informed.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Active Tickets</h2>
+        <div style="overflow-x: auto;">
+          <table class="glass-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Subject</th>
+                <th>Customer</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Update Status</th>
+              </tr>
+            </thead>
+            <tbody id="agent-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Agent updates are reflected instantly across ServiceTrack.
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supervisor Dashboard | MTC ServiceTrack</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-mark">MTC</div>
+        <div class="logo-text">
+          <h1>ServiceTrack</h1>
+          <span>Supervisor Dashboard</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="submit.html">Report Issue</a>
+        <a href="track.html">Track Ticket</a>
+        <a href="agent.html">Agent</a>
+        <a href="supervisor.html">Supervisor</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="glass-panel">
+        <h2>Supervisor Insights</h2>
+        <p>Monitor live ticket volumes and escalation patterns.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Live Ticket KPIs</h2>
+        <div class="grid-3" id="supervisor-stats"></div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Recent Tickets</h2>
+        <div style="overflow-x: auto;">
+          <table class="glass-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Subject</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Customer</th>
+                <th>Created</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="supervisor-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Supervisor view updates in real time with ticket changes.
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
